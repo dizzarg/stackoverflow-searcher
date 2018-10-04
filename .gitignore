@@ -1,0 +1,11 @@
+
+*.iml
+.project
+.classpath
+.settings
+target/
+
+# dependencies
+**/node_modules
+
+npm-debug.log*

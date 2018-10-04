@@ -1,0 +1,22 @@
+version: '2'
+services:
+  nginx:
+    container_name: ui-container
+    image: nginx:1.13
+    restart: always
+    ports:
+    - 80:80
+    volumes:
+    - ./nginx/conf.d:/etc/nginx/conf.d
+    - ./ui/frontend/build:/home/frontend/web/public
+  app:
+    container_name: app-container
+    image: java:8u111-jre-alpine
+    volumes:
+    - ./application/target:/app
+    ports:
+    - "8080:8080"
+    command:
+    - "java"
+    - "-jar"
+    - "/app/stackoverflow-searcher-demo-0.0.1-SNAPSHOT.jar"
