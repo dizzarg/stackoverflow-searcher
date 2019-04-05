@@ -6,7 +6,7 @@ The web application allows user to search questions according to the input data 
 ### Requirements:
   * Oracle Java SE Development Kit 8 
   * Apache Maven 3.x
-  * Dcoker 18.03 
+  * Docker 18.03 
 
 ### Build
 The project is built by a command `mvn clean package`.
